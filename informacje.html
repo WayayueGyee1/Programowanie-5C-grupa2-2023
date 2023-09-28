@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gazeta</title>
+    
+<link rel="stylesheet" href="styl3.css">
+</head>
+<body>
+    <header>
+        <div class="baner">
+            <h1>Gazeta codzienna</h1>
+        </div>
+    </header>
+    <section class="artykuly">
+        <div class="left">
+            <button id="infoButton">Sekcja wiadomości z kraju</button>
+            <div id="infoArticle" style="display: none;">
+                <h1>Szczepimy seniorów</h1>
+                <p>Od pi¹tku osoby powy¿ej 80 lat mog¹ zarejestrowaæ siê na szczepienie przeciw COVID-19. Do wyboru maj¹ niemal szeœæ tysiêcy przychodni, w których od 25 stycznia bêd¹ odbywaæ siê szczepienia. Termin mo¿na zarezerwowaæ telefonicznie, przez internet lub w punkcie szczepieñ. Na szczepienie przeciw COVID-19 od pi¹tku mog¹ siê umawiaæ seniorzy powy¿ej 80. roku ¿ycia, a tydzieñ póŸniej rusz¹ zapisy dla osób, które ukoñczy³y 70 lat. Szczepienia dla seniorów rozpoczn¹ siê 25 stycznia.</p>
+            </div>
+
+            <button id="sportButton">Sekcja sportowa</button>
+            <div id="sportArticle" style="display: none;">
+                <h1>Stoch i Kubacki na podium w Bischofshofen</h1>
+                <p>W œrodê w Bischofshofen odbêdzie siê ostatni konkurs 69. Turnieju Czterech Skoczni. Po trzech zawodach prowadzi Kamil Stoch z du¿¹ przewag¹ nad Dawidem Kubackim i Norwegiem Halvorem Egnerem Granerudem. Skocznia im. Paula Ausserleitnera w Bischofshofen, gdzie tradycyjnie koñczy siê TCS, jest szczêœliwa dla reprezentantów Polski, którzy wygrali tu trzy z ostatnich czterech konkursów - Stoch w 2017 i 2018, a Kubacki - w ubieg³ym roku.
+                </p>
+            </div>
+
+            <button id="newsButton">Sekcja aktualności</button>
+            <div id="newsArticle" style="display: none;">
+                <h1>Dzieñ Babci 2021. Pomys³y na prezent i historia œwiêta w Polsce</h1>
+                <p>Dzieñ Babci to wyj¹tkowe œwiêto, w którym zewsz¹d p³yn¹ ¿yczenia skierowane w³aœnie w stronê babæ. Najm³odsi w³asnorêcznie lub z drobn¹ pomoc¹ wykonuj¹ piêkne laurki, a nieco starsze wnuczêta z pewnoœci¹ maj¹ przygotowany niejeden prezent. Tego dnia w szko³ach czêsto przygotowywane s¹ tak¿e ró¿ne przedstawienia, a oryginalne scenariusze czêsto wywo³uj¹ u dziadków ³zy wzruszenia.</p>
+            </div>
+
+            <button id="announcementButton">Sekcja ogłoszeń</button>
+            <div id="announcementArticle" style="display: none;">
+                <h1>Zaginione / znalezione</h1>
+                <p> W O³awie, na ulicy Lipowej w pi¹tek wieczorem znalaz³am czarnego ma³ego kotka. Jest zadbany i ufny, ma czerwon¹ obró¿kê. Telefon 600100200.</p>
+            </div>
+
+
+    
+    
+        </div>
+        <div class="right">
+            <blockquote>
+                Pierwszym obowiązkiem dziennikarza jest nie nudzić.<br>
+                Drugim: nie bać się.<br>
+                Trzecim: niczego nie wyrzucać</blockquote>
+                <img class="obrazek" src="obraz.jpg" alt="redaktor naczelny">
+                <h5>Jan Nowak<br>
+                Redaktor naczelny<br/>
+                gazety codziennej</h5>
+                <h3 style="text-align: left;">Zespół</h3>
+                
+                <div class="zespol">
+                    <table>
+                        <tr>
+                             <th>Ewa</th>
+                             <th>wiadomości z kraju</th>
+                        </tr>
+                        <tr>
+                         <th>Krzysiek</th>
+                         <th>sport</th>
+                     </tr>
+                     <tr>
+                         <th>Ewelina</th>
+                         <th>aktualności</th>
+                     </tr>
+                     <tr>
+                         <th>Robert</th>
+                         <th>ogłoszenia</th>
+                     </tr>
+                     </table>
+                     <a href="http://dziennikarz.pl/" target="_blank">
+                        Więcej artykułów
+                    </a>
+                    <p>Stronę gazety codziennej przygotowal: Krystian Paluch</p>
+                </div>
+        </div>
+    </section>
+</body>
+<script>
+    const sportButton = document.getElementById('sportButton');
+    const newsButton = document.getElementById('newsButton');
+    const sportArticle = document.getElementById('sportArticle');
+    const newsArticle = document.getElementById('newsArticle');
+    const infoButton = document.getElementById('infoButton');
+    const announcementButton = document.getElementById('announcementButton');
+    const infoArticle = document.getElementById('infoArticle');
+    const announcementArticle = document.getElementById('announcementArticle');
+    
+    
+    function hideAllArticles() {
+        sportArticle.style.display = 'none';
+        newsArticle.style.display = 'none';
+        infoArticle.style.display = 'none';
+        announcementArticle.style.display = 'none';
+    }
+    
+    hideAllArticles();
+    
+    sportButton.addEventListener('click', function() {
+        hideAllArticles(); 
+        sportArticle.style.display = 'block';
+    });
+    
+    newsButton.addEventListener('click', function() {
+        hideAllArticles();
+        newsArticle.style.display = 'block';
+    });
+    infoButton.addEventListener('click', function() {
+        hideAllArticles(); 
+        infoArticle.style.display = 'block';
+    });
+    
+    announcementButton.addEventListener('click', function() {
+        hideAllArticles();
+        announcementArticle.style.display = 'block';
+    });
+</script>
+</html>
